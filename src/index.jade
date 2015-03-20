@@ -1,0 +1,1361 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title 3세대 플랫폼의 프론트엔드 개발기법
+
+    link(rel='stylesheet', type='text/css', href='build/build.css')
+    link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
+  body
+    div(id="fb-root")
+    script.
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&appId=294097790751111&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    - var smallTitle ='';
+    article
+
+      section(style="background-color:black")
+        h1  
+
+      section.light(data-bespoke-state='white')
+
+        h2 3세대 플랫폼의
+          br
+        h1.red 프론트엔드
+        h1 개발기법
+        br
+        h4 2015.03.20.
+        h4 이종은
+
+      //- section
+      //-   img.circle(src="./images/jong.png",width="200px")
+      //-   br
+      //-   h2 이종은
+      
+      //- section
+      //-   h1 이종은
+
+      //- section
+      //-   span.fa-4x 👪 👶
+      //-   h1
+      //-     i.fa.fa-heart.fa-3x.red
+
+      //- section
+      //-   h1
+      //-     i.fa.fa-child
+      //-     br
+      //-     | GW-Basic
+
+      //- section
+      //-   h1
+      //-     i.fa.fa-graduation-cap.fa-2x
+      //-     br
+      //-     | C++
+
+      //- section
+      //-   h1
+      //-     i.fa.fa-building-o.fa-2x
+      //-   //- img(src="./images/daum_logo.svg",width="200px")
+      //-   h2.bullet ActionScript, JavaScript
+      //-   h2.bullet HTML, CSS
+      //-   h2.bullet Objective-C
+
+      //- section
+      //-   h1
+      //-     i.fa.fa-compass.fa-3x
+      //-     | &nbsp; &nbsp;          
+      //-     i.fa.fa-mobile.fa-3x
+
+      section
+        //- img(src="")
+        img(src="./images/yostudio_logo.svg",width="300px")
+        h2 이종은
+        h3
+          i.fa.fa-heart.red
+          |  JavaScript
+          br
+          i.fa.fa-twitter
+          | &nbsp;
+          i.fa.fa-github 
+          a(href="https://github.com/yomybaby",target="_blank")  yomybaby
+          br
+          img(src='./images/badge/tidev.png',width="25px")
+          |   한국 타이타늄 사용자 모임 (tidev.kr)
+        //- hr
+        //- h4.normal.lightGray
+        //-   img(src="./images/daum_logo.svg",width="30px")
+        //-   |  : JS, AS, Objective-C
+        //-   br
+        //-   i.fa.fa-mobile.puple
+        //-   |  : Web(JS), App(Titanium)
+
+
+      //- section
+      //-   h1.bullet Titanium Developer
+      //-   ul.bullet
+      //-     li
+      //-       | 한국 타이타늄 사용자 모임 
+      //-       a(href="http://tidev.kr",target="_blank") tidev.kr
+      //-       |  운영
+      //-     li
+      //-       | Titanium Certified Expert
+      //-     li Titan
+      //-     li NIPA 글로벌 오픈 프론티어
+      //-     li
+      //-       ul.badge_list
+      //-         li
+      //-           img.badge(src='./images/badge/tidev.png')
+      //-           | &nbsp;
+      //-           img.badge(src='./images/badge/tced.png')
+      //-           | &nbsp;
+      //-           img.badge(src='./images/badge/titans.png')
+
+      section
+        h1 
+          i.fa.fa-heart.fa-3x.red
+        h2 Creative Commons,
+        h2 Open Source
+
+      section
+        h1.bullet 어려움 하나
+        h3.bullet 여러분을 오늘 처음 만났다.
+      
+      section
+        h2 여러분은 누구인가요?
+
+      section
+        h2 오늘의 이야기는..
+        //- h3 
+
+      section
+        h3 옛날
+        h2 인터넷 서비스 (=웹)
+        h3 클라이언트 : PC(브라우저)
+
+      section
+        h3 오늘날
+        h2 인터넷 서비스 (=웹+앱+..)
+        h3 클라이언트 : PC, 모바일, IoT..
+
+      section
+        h1.bullet 복잡
+        h2.bullet 많은 
+          span.red  변화
+          | 와  
+          span.red 발전
+
+      section
+        h2 FRONT-END의 
+          span.red  변화
+          | 와  
+          span.red 발전
+        h3 도구와 라이브러리 중심으로..
+
+      section
+        h2 목차
+        h3
+          ul.fa-ul.left
+            li
+              i.fa.fa-ul.fa-angle-right
+              |  '변화' - 서버 중심에서 클라이언트 중심으로
+            li
+              i.fa.fa-ul.fa-angle-right
+              |  '프론트엔드 기법1' - 생산성 높이기
+            li
+              i.fa.fa-ul.fa-angle-right
+              |  '프론트엔드 기법2' - 웹의 애플리케이션화
+            li
+              i.fa.fa-ul.fa-angle-right
+              |  '프론트엔드 기법3' - 서버부터 네이티브앱까지
+        br
+        h4.normal (부록1: 생산성을 위한 도구 소개, 부록2: 헷갈리는 JavaScript)
+
+      section.light(data-bespoke-state='white')
+        h1 진행안내
+
+      section
+        h1
+          | There are NO stupid question.
+      
+      section
+        h1 
+          i.fa.fa-star-half-o.fa-2x.red
+        h2.bullet 이 시간의 반쪽은
+          br
+          | 여러분의 질문으로 완성됩니다.
+        br
+        div.bullet 
+          h3         
+            i.fa.fa-heart.red
+            |  REAL 후기
+          | - 
+          span.red 어떠한 질문이든 다 받아주시던 점
+          | 이 좋았습니다.
+          br
+          | - 질문에 대한 
+          span.red 답변을 상세히
+          |  해주어서 좋았습니다.
+          br
+          | - 질의에 
+          span.red  열정적으로
+          |  응답하는 모습이 좋았습니다.
+
+      section
+        h1.bullet 오늘은
+        h1.bullet 함께
+        h1.bullet 편안하게
+
+      section.light(data-bespoke-state='white')
+        h1
+          i.fa.fa-random.fa-3x
+        h1 1. 변화
+        h3 서버 중심에서 클라이언트 중심으로
+
+      section
+        h2.bullet 서버와 클라이언트의 역할 변화
+        h1.bullet
+          i.fa.fa-mobile
+        h1
+          i.fa.fa-server
+          | &nbsp;&nbsp;&nbsp;
+          i.fa.fa-desktop
+          | &nbsp;&nbsp;&nbsp;
+          i.fa.fa-user
+        h1.bullet
+          i.fa.fa-tablet
+        h3.bullet (그림을 그려가며 설명)
+
+      section
+        h2 서버의 역할의 단순화
+        h3 서버 기술의 고도화
+
+      section
+        h2.bullet API 서버화
+        pre.bullet
+          code.
+            POST http://api/createUser.php
+            POST http://api/getUserList.php
+        pre.bullet
+          code.
+            POST http://api/user.json?method=create
+            POST http://api/user.json?method=list&gender=man
+        h1.bullet
+          i.fa.fa-ban.red
+          |  나쁜 예
+      
+      section
+        h2 RESTful API
+        h3
+          ul
+            li URI : Resource(대상)
+            li Method : 동작
+            li (Data)
+
+      section
+        h2.bullet CRUD
+        h3
+          ul
+            li.bullet POST : Create
+            li.bullet GET : Read
+            li.bullet PUT : Update
+            li.bullet DELETE : Delete
+            li.bullet 
+              br
+              | HEAD : 존재 여부
+
+      section
+        h2 RESTful API
+        h3 
+          ul
+            li 
+              i.fa.fa-star.yellow
+              |  http만 된다면 어떤 장비에서든 
+            li 
+              i.fa.fa-star.yellow
+              |  같은 방식이기에 누구나 쉽게
+
+      section
+        h1 백엔드의 서비스화
+        h2 IaaS
+        h3 (Infra as a Service)
+        h2 PaaS
+        h3 (Platform as a Service)
+        h2 BaaS
+        h3 (Back-end as a Service)
+
+      section
+        h2 다양한 BaaS
+        hr
+        ul
+          li
+            img(src="https://parse.com/images/parse-logo.png",width="100px")
+          li
+            img(src="http://www.kinvey.com/images/kinvey-logo-navbar.png")
+          li
+            img(src="https://developers.sktelecom.com/resources/images/logo.gif",width="100px")
+          li
+            img(src="https://baas.io/images/logo_origin.png",width="100px")
+      section
+        h3
+          ul
+            li Back-end : Java, PHP, Node.js, Ruby, Python, ..
+            li Front-end(web) : JavaScript, HTML, CSS,.. 
+            li Front-end(app) : Objective-C, Java, JavaScript, C#..
+            li DB : mysql, Oracle, Mongodb, ..
+            li 
+
+      section(style="transition:none !important")
+        h3
+          ul
+            li Back-end : Java, PHP, 
+              span.red Node.js
+              | , Ruby, Python, ..
+            li Front-end(web) : 
+              span.red JavaScript
+              | , HTML, CSS,.. 
+            li Front-end(app) : Objective-C, Java, 
+              span.red JavaScript
+              | , C#..
+            li DB : mysql, Oracle, 
+              span.red Mongodb
+              | , ..
+
+      section
+        h1
+          i.fa.fa-heart.fa-3x.red
+          br
+          span.red ONE LOVE
+          br.bullet
+          span.bullet JavaScript
+      
+      section
+        h1
+          i.fa.fa-rocket.fa-4x.red
+        h2 JavaScript
+
+      section
+        h1
+          img(src="https://nodejs.org/images/logo.svg",width="300px")
+
+      section
+        h1 Google V8
+
+      section
+        h1.bullet 
+          i.fa.fa-eye.fa-2x
+          | &nbsp;&nbsp;&nbsp;&nbsp;
+          img(src="https://nodejs.org/images/logo.svg",width="200px")
+        h2.bullet JS로 서버를..
+        h2.bullet Socket.io..
+
+      section
+        h2 브라우저 밖으로 탈출!!
+      section
+        h1 Node.js
+        h1 생태계
+        span.fa-4x💧🌼🐝🍯🐻
+
+      section
+        h2 웹을 넘어
+        h1 개발 도구
+        h3 (test, build.. on NPM)
+
+      section
+        h2 웹을 넘어   
+        h1 Native App
+        h3 (Titanium, React Native, NativeScript..)
+
+      section
+        h2 웹을 넘어
+        h1 하드웨어까지
+        h3 (
+          a(href="http://spark.io") Spark
+          | , 라즈베리파이..)
+
+      //- section
+      //-   h2 '들려주고 싶은 이야기'
+      //-   p.bullet
+      //-     h3 라고 쓰고
+      //-     h3 '잔소리'라 읽는다.
+      
+
+      section.light(data-bespoke-state='white')
+        h1
+          i.fa.fa-wrench.fa-3x
+        h2 2. 생산성 높이기
+
+      section
+        img(src="https://nodejs.org/images/logo.svg",width="200px")
+        h2
+          i.fa.fa-file-text-o.fa-3x
+        h3 JS로 파일을 읽고 쓰다
+
+      section
+        h2 프론트엔드 개발자
+        h2.bullet JavaScript로
+        h2.bullet 
+          i.fa.fa-file-text-o
+          |  파일을 다루는 도구를
+        h2.bullet 직접 만들다 
+          i.fa.fa-thumbs-o-up
+
+      section
+        h1
+          i.fa.fa-question.fa-3x
+        h2.bullet Q. 이 발표자료는
+          br 
+          | 무엇으로 만든걸까요?
+        h3.bullet 파워포인트? 키노트?
+        h3.bullet.strong.red A. HTML, CSS, JavaScript
+
+      section
+        h2.bullet Bespoke.js
+        h3.bullet (구경해볼까요)
+        //- h2
+        //-   i.fa.fa-wrench
+        //- h3 gulp, yeoman, jade, bower, stylus..
+      
+      section
+        h2 HTML 템플릿
+        h3 
+          ul
+            li 
+              a(href="http://jade-lang.com/reference/filters/",target="_blank") jade
+            li 
+              a(href="http://ejs.co/",target="_blank") ejs
+            //- li 
+            //-   a(href="http://jade-lang.com/reference/filters/",target="_blank") jade
+      
+      section
+        h2 CSS
+        h3
+          ul
+            li 
+              a(href="http://lesscss.org/",target="_blank") less
+            li 
+              a(href="http://sass-lang.com/",target="_blank") sass
+            li 
+              a(href="http://learnboost.github.io/stylus",target="_blank") stylus
+            li
+              a(href="https://github.com/postcss/autoprefixer",target="_blank") autoprefixer
+
+      section
+        h2 자동화
+        h3
+          ul
+            li 
+              a(href="http://gulpjs.com/",target="_blank") gulp.js
+            li 
+              a(href="http://gruntjs.com/",target="_blank") grunt.js
+
+      section
+        h3 grunt
+        img(src="http://jaysoo.ca/images/grunt-flow-2.png",style="background-color:white;",width="500px")
+        hr 
+        h3 gulp
+        img(src="http://jaysoo.ca/images/gulp-flow.png",style="background-color:white;",width="500px")
+
+      section
+        h2 그외 
+        h3
+          ul
+            li 
+              a(href="http://yeoman.io/",target="_blank") yeoman(yo) : 스캐폴딩 툴
+            li 
+              a(href="http://bower.io/",target="_blank") bower : 브라우저용 패키지 매니저
+
+      section
+        h2 한번 해볼까요?
+        pre
+          code.
+            npm install -g generator-bespoke bower gulp
+        h3 (git 설치 필요)
+
+      section.light(data-bespoke-state='white')
+        h1
+          i.fa.fa-cubes.fa-3x
+        h2 3. 웹의 애플리케이션화 (MV*)
+
+      section
+        img(src="https://developer.chrome.com/static/images/jstransferrequests.png",width="500px")
+        h3 JS 용량이 1년사이에 45%증가
+
+      section
+        h1
+          i.fa.fa-line-chart.fa-3x
+        h2 복잡해졌다
+        h2 협업 필요
+
+      section
+        h3 코드를 한줄 한줄 어떻게 짤것인가?
+        h3.bullet 보다
+        h2.bullet 전체를 어떤 구조로 짤 것인가?
+
+      section
+        h2  utils.js, commons.js에 
+          br
+          | 따 때려 넣기
+        pre.language-javascript.small_font
+          code.
+            common.getUserData = function(){
+              //...
+              common.getProfileUrl(userId)
+              //...
+            }
+
+            common.getProfileUrl = function(userId){
+              //...
+            }
+
+            common.dateFormat = function(str){
+            }
+
+      section
+        h1
+          i.fa.fa-flag-checkered
+        h2 유지보수
+        h2 재사용
+
+      section
+        h2 디자인 패턴
+        h2 MVC
+        h3 (Model-View-Controller)
+
+      section
+        h2 서버의 MVC
+        img(src="http://wiki.gurubee.net/download/attachments/26740980/7_mvcpattern.png")
+
+      section
+        h2 클라이언트의 MVC
+        img(src="https://developer.chrome.com/static/images/mvc.png")
+
+      section
+        h2 서버의 MVC : 정적
+        h3 사용자 액션 = Request
+        hr
+        h2 클라이언트의 MVC : 동적
+        h3 사용자 액션 = Event
+
+      section
+        h2.bullet 이 코드는 어디에 넣지?
+        h2.bullet Independent components
+        h3.bullet (예: 밥을 준비한 엄마)
+
+      section
+        h2 JS MV*
+        h3 
+          a(href="http://angularjs.org",target="_blank") Angular.js, 
+          a(href="http://backbonejs.org",target="_blank") Backbone.js, 
+          a(href="http://reactjs.org",target="_blank") React.js, 
+          a(href="http://emberjs.com",target="_blank") Ember.js..
+
+      section
+        h2 예제로 살펴보기
+        h3
+          a(href="http://curran.github.io/screencasts/introToAngular/exampleViewer/#/",target="_blank") Angular 50 examples
+
+      section.light(data-bespoke-state='white')
+        h1
+          i.fa.fa-server.fa-2x
+          | &nbsp;&nbsp;&nbsp;
+          i.fa.fa-mobile.fa-2x
+        h2 4. 서버, 그리고 네이티브앱까지
+        h3 (Full-stack)
+
+      section
+        h2 JS로 네이티브앱을 만든다.
+        h3 Titanium, Reacti Native, NativeScript
+
+      section
+        h2 혹시 모바일에 네이티브 껍데기?
+        img(src="./images/phoneGap.png",width="200px",style="border-radius: 100px;background-color:white")
+        h3 (PhoneGap류)
+
+      section.light.gif.gif--no2
+        h1 NO!
+
+      section
+        h2 그럼 어떻게 동작하는 것인가?
+        h3 (키노트로 설명)
+
+      section(data-bespoke-state='puple')
+        h1.white
+          
+          |  DEMO TIME!
+        ul.white
+          li
+            i.fa.fa-wrench
+            span.light  BUILD :
+            |  Titanium Studio / Ti CLI
+          li
+            i.fa.fa-cube 
+            |  MVC : Alloy
+          li
+            i.fa.fa-cloud
+            |  REST API adapter
+          li 
+            i.fa.fa-rocket
+            |  AWESOME : TiShadow
+          li
+            i.fa.fa-puzzle-piece
+            |  FANTASTIC 3rd party tools..
+
+      section
+        h1 BaaS
+        a(href="https://strongloop.com/",target="_blank")
+          img(src="data:image/png;base64,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",
+            style="background-color:white")
+    
+      section.light(data-bespoke-state='white')
+        h3 
+          i.fa.fa-bookmark.red
+          |  부록A
+        span.fa-4x 🔧
+        h2 생산성을 위해 애용하는 도구 소개
+        h3 dash, alfred, charles, postman, gas mask,
+          br
+          | cloud app..
+
+      section.light(data-bespoke-state='white',data-bespoke-hash="js")
+        h3 
+          i.fa.fa-bookmark.red
+          |  부록B
+        span.fa-4x 😲
+        h2 헷갈리는 JavaScript
+
+      section
+        h2 장점 vs. 단점
+
+      section
+        h2 비교 연산자 == vs ===
+        pre
+          code.language-javascript.
+            var one= 1, oneString = '1' , t = true;
+
+            console.log(one == oneString);
+            console.log(one == t);
+            console.log(oneString == t);
+
+            console.log(one === oneString);
+            console.log(one === t);
+            console.log(oneString === t);
+        a(data-bespoke-run)
+          | Run!
+
+      section
+        h2 원시값의 복사
+        pre
+          code.language-javascript.
+            var p = 1;
+            var copyOfP = p;
+            p = 3;
+            console.log(copyOfP);
+
+            var myObject = {};
+            var copyOfMyObject = myObject;
+            myObject.foo = 'bar';
+            console.log(copyOfMyObject.foo);
+        a(data-bespoke-run)
+          | Run!
+
+      section
+        h2. 원시값의 비교
+        pre
+          code.language-javascript.
+            var p1 = 10;
+            var p2 = 10;
+            var p3 = new Number('10');
+            var p3_1 = Number('10');
+            var p4 = p3;
+
+            console.log(p1 === p2);
+            console.log(p1 === p3);
+            console.log(p3_1 === p3);
+            console.log(p1 === p3_1);
+            p4=10;
+            console.log(p4 === p3);
+        a(data-bespoke-run)
+          | Run!
+
+      section
+        h2. 복합 객체의 비교
+        pre
+          code.language-javascript.
+            var objectFoo = { name : 'jong' };
+            var objectBar = { name : 'jong' };
+
+            console.log( objectFoo === objectBar );
+
+            var objectA = { name : 'ti' };
+            var objectB = objectA;
+
+            console.log( objectA === objectB );
+        a(data-bespoke-run)
+          | Run!
+      
+      section
+        h2. 객체 속성 접근방법
+        ul
+          li object['property_name']
+          li object.property_name
+        pre
+          code.language-javascript.
+            var obj = {
+                name : 'MyObject'
+            };
+            var a = 'name';
+            console.log(obj.name);
+            console.log(obj["name"]);
+            console.log(obj[a]);
+        a(data-bespoke-run)
+          | Run!
+      
+      section
+        h2. 함수는 1급 클래스이다.
+        blockquote
+          | 변수, 배열, 객체에 저장될 수 있다는 뜻이다. 또한 함수에 전달될 수도 있고 함수에서 반환될 수도 있다. 그리고 함수는 객체이기 때문에 속성도 가지고 있다.
+          br
+          b - "자바스크립트를 깨우치다" 중에서
+        pre.small_font
+          code.language-javascript.
+            var myFun = function(){
+                console.log('MyFun');
+            };
+
+            var yourFun = function(fn){
+              fn();
+              return function(){
+                console.log('return Fun');
+              }
+            };
+
+            var retFun = yourFun(myFun);
+            retFun();
+        a(data-bespoke-run)
+          | Run!
+
+      section
+        h2 this
+        pre
+          code.language-javascript.
+            function fn(){
+              console.log(this);
+            }
+            fn();
+            new fn();
+        a(data-bespoke-run)
+          | Run!
+        a(href="http://davidql.github.io/scope_talk/#/",target="_blank") this와 scope 참고 자료
+      
+      section
+        h2 arguments
+        pre
+          code.language-javascript.
+            var myFun = function(){
+              console.log(arguments[0]);
+              console.log(arguments.length);
+              console.log(arguments.join);
+              console.log(arguments.callee);
+              console.log([].join);
+            };
+            myFun(1,2,'333','Ti');
+
+        a(data-bespoke-run)
+          | Run!
+
+      section
+        h2 Hoisting
+        p.small_font 함수 선언문 먼저 해석하고 Excuete context에 추가
+        pre
+          code.language-javascript.
+            foo();
+            function foo() {
+                console.log('I am NOT Android'); 
+            }
+        a(data-bespoke-run)
+          | Run!
+
+      section
+        h2 클로저
+        pre
+          code.language-javascript.
+            var z = "global";
+            function outerFn() {
+                var z = "local";
+                alert(newVal);
+                return function innerFn()
+                {
+                        console.log(z);
+                }
+                innerFn();
+            } 
+            var newVal = 't';
+            var f = outerFn();
+            f();
+            console.log(z);
+        a(data-bespoke-run)
+          | Run!
+      
+      section.gif.gif--yes4
+        h2(style="padding-left:200px") 준비한 내용은 
+          br
+          | 여기까지입니다.
+        h2(style="padding-left:200px") Front-end 어때요?
+
+      section.light.gif.gif--rocky.full
+        h1 감사합니다.
+        h3(style="background-color:white") jong@yostudio.kr
+        h3(style="background-color:white") class.yostudio.kr
+
+      //- section
+      //-   h1 JS
+      //-   h2 제가 참 좋아하는데요.
+
+      //- section
+      //-   h2 Q. 왜 JS를 메인 언어로 택했나요?
+
+      //- section.gif.gif--speed
+      //-   h1 SPEED
+
+      //- section
+      //-   h1
+      //-     i.fa.fa-thumbs-o-up.fa-3x
+      //-   h2 멋진 아이디어로 한번에 성공?
+
+      //- section.gif.gif--run
+      //-   h1 운동장
+
+      //- section
+      //-   h1 실패해도
+      //-   h1 잃을 것을 최소화
+      //-   h2 시간, 돈, 체력..
+      
+      //- section
+      //-   h1
+      //-     i.fa.fa-heart.fa-3x.red
+      //-     br
+      //-     span.red ONE LOVE
+      //-     br
+      //-     span JavaScript
+
+      //- section
+      //-   h1 Node.js의 등장
+
+      //- section
+      //-   h1.bullet Node.js
+      //-   h1.bullet 생태계
+
+      //- section
+      //-   h2 웹을 넘어
+      //-   h1 개발 도구
+      //-   h3 (test, build.. on NPM)
+
+      //- section
+      //-   h2 웹을 넘어   
+      //-   h1 Native App
+      //-   h3 (Titanium, React Native, NativeScript..)
+
+      //- section
+      //-   h2 웹을 넘어
+      //-   h1 하드웨어까지
+      //-   h3 (
+      //-     a(href="http://spark.io") Spark
+      //-     | )
+
+      //- section
+      //-   h1
+      //-     i.fa.fa-cutlery.fa-2x
+      //-   h2 맛보기 시연^^
+      //-   h3 (bespoke.js, titanium, BaaS..)
+
+
+      //- section.light(data-bespoke-state='white')
+      //-   h3 이야기3.
+      //-   h1 JS 바로 알기
+
+      
+      //- section.light(data-bespoke-state='white')
+      //-   h3 이야기4.
+      //-   h1 다음부터
+      //-     br
+      //-     | 무엇을 할까요?
+
+      //- section
+      //-   h1 감사합니다.
+      //-   h3 jong@yostudio.kr
+      //-   h3 class.yostudio.kr
+
+      //- section
+      //-   h1.bullet Titanium Developer
+      //-   ul.bullet
+      //-     li
+      //-       | 한국 타이타늄 사용자 모임 
+      //-       a(href="http://tidev.kr",target="_blank") tidev.kr
+      //-       |  운영
+      //-     li
+      //-       | Titanium Certified Expert
+      //-     li Titan
+      //-     li NIPA 글로벌 오픈 프론티어
+      //-     li
+      //-       ul.badge_list
+      //-         li
+      //-           img.badge(src='./images/badge/tidev.png')
+      //-           | &nbsp;
+      //-           img.badge(src='./images/badge/tced.png')
+      //-           | &nbsp;
+      //-           img.badge(src='./images/badge/titans.png')
+        
+
+      //- section
+      //-   h1 
+      //-     i.fa.fa-heart.fa-3x.red
+      //-   h2 Creative Commons,
+      //-   h2 Open Source
+      //- section
+      //-   h2 목차
+      //-   h3
+      //-     ul.fa-ul.left
+      //-       li
+      //-         i.fa.fa-ul.fa-angle-right
+      //-         |  타이타늄 소개
+      //-       li
+      //-         i.fa.fa-ul.fa-angle-right
+      //-         |  선발시 활동 계획
+      //-       li 
+      //-         i.fa.fa-ul.fa-angle-right
+      //-         |  활동 내용
+      //-       li
+      //-         i.fa.fa-ul.fa-angle-right
+      //-         |  향후 추진방향
+
+      //- section.light(data-bespoke-state='white')
+      //-   p
+      //-    img(src="./images/ti.png",style="width:300px")
+      //-   h2 Titanium 소개
+
+      //- section
+      //-   h1
+      //-     i.fa.fa-apple.fa-3x
+      //-     span &nbsp;&nbsp;&nbsp;
+      //-     i.fa.fa-android.fa-3x
+      //-   h3 CROSS PLATFORM
+      //- section
+      //-   h1 Open Source
+      //-   h2 Apache License 2
+
+      //- section
+      //-   table
+      //-     tr
+      //-       td
+      //-         img(src="./images/appcelerator.png",width="200px")
+      //-       td
+      //-         img(src="./images/jeff.jpg",width="200px")
+      //-   h2.bullet Jeff Haynie
+      //-   h3.bullet Coding CEO
+      //-   //- p 2007년 Appcelerator Titanium Mobile이 핵심제품
+      
+      //- section.gif.gif--alone
+      //-   h2(style="margin-top:100px") We can’t build it alone…
+
+
+      //- section.gif.gif--community
+      //-   h2 The Titanium Community
+      //-   h3 A FORCE FOR GOOD
+
+      //- section
+      //-   img(src="./images/shot_developer.png",style="width:150px")
+      //-   br
+      //-   h3 NUMBER OF REGISTERED TITANIUM DEVELOPERS
+      //-   h1 650,000
+        
+      //- //- section
+      //- //-   h2 수많은 오픈소스, 책, QnA 존재
+
+      //- secion 
+      //-   h1 Gartner Magic Quadrant Leader
+      //-   table
+      //-     tr
+      //-       td
+      //-         img(src="./images/gartner/2013.png",width="100px")
+      //-       td
+      //-         img(src="./images/gartner/2012.png",width="100px")
+      //-       td
+      //-         img(src="./images/gartner/2011.png",width="100px")
+      //-       td
+      //-         img(src="./images/gartner/2010.png",width="100px")
+
+      //- section
+      //-   h1 Community 
+      //-     i.fa.fa-heart.red
+      //-     br
+      //-     | Open Source
+      //-   p Significant prebuilt assets are available for use from Appcelerator's community, including code, apps and cloud services.
+
+     
+
+      //- section
+      //-   p
+      //-    img(src="./images/ti.png",style="width:400px")
+      //-   h3 Titanium에 대한 
+      //-   h2 진실 혹은 거짓
+
+      //- section
+      //-   table
+      //-     tr
+      //-       td
+      //-         h1
+      //-           i.fa.fa-html5.fa-3x
+      //-           | &nbsp;&nbsp;&nbsp;
+      //-       td 
+      //-         img(src="./images/phoneGap.png",width="200px",style="border-radius: 100px;background-color:white")
+      //-   h2 HTML5?
+      //-     br
+      //-     | PhoneGap류?
+
+      //- section.light.gif.gif--no2
+      //-   h1 NO!
+
+      //- //- section.light.gif.gif--no
+
+      //- //- section
+      //-   p vm상에서 돌아간다 webview기반이 아니다. javascript짜면 js와 native를 binding 하는 형태
+
+      //- section
+      //-   table
+      //-     tr
+      //-       td
+      //-         img(src="./images/nativeui/native.jpg",width="200px")
+      //-       td
+      //-         h2 &nbsp; or &nbsp;
+      //-       td
+      //-         img(src="./images/nativeui/fake.jpg",width="200px")
+
+      //-   h2 Native UI?
+
+      //- section.light.gif.gif--yes3
+      //-   h1. YES! Native UI!
+
+      //- section
+      //-   h3 iOS vs Android
+      //-   a(href="http://www.knowyourmobile.com/apple/apple-ios-7/21408/ios-7-vs-android-44-kitkat-clash-titans",target="_blank")
+      //-     img(width=315,height=251,src="http://static.knowyourmobile.com/sites/knowyourmobilecom/files/styles/insert_main_wide_image/public/6/67/music_0.jpg?itok=PzPXZ4wu")
+      //-     //- p.small_font 원문 링크 바로가기
+
+      //- section
+      //-   h2 JavaScript?
+
+      //- section.light.gif.gif--yes2
+      //-   h1.white YES!
+      //-   h1.green JavaScript
+      //- section
+      //-   h2 JavaScript
+      //-     i.fa.fa-heart.fa-3x.red
+      //-   h3 Build tool, MVC Framework, Hook..
+
+      //- section.light(data-bespoke-state='white')
+      //-   h1
+      //-     i.fa.fa-cloud.fa-3x.red
+      //-   h2 Titanium with
+      //-   h1 CLOUD
+      //-   p (For Mobile Application Life Cycle)
+
+      //- section
+      //-   h1 ACS
+      //-   h3 (Appcelerator Cloud Service)
+      //-   h3. = MBaaS
+      //-   p
+      //-     img(src="./images/acs.png",width="500px")
+      
+      //- section
+      //-   img(src="./images/nodeacs.png",width="150px")
+      //-   h1 Node.ACS
+      //-   ul.fa-ul.left
+      //-     li. = Node 호스팅
+      //-     li
+      //-       i.fa-li.fa.fa-cloud
+      //-       | ACS의 API를 확장하고 커스터마이징 가능
+      //-     li 
+      //-       i.fa-li.fa.fa-cloud
+      //-       | CLI를 이용해서 쉬운 생성과 배포
+      //-     li 
+      //-       i.fa-li.fa.fa-cloud
+      //-       | CNAME을 이용한 독립 도메인 연결
+      //- //- section
+      //- //-   img(src="https://www.npmjs.org/static/img/npm.png",style="width:100px")
+      //- //-   pre.language-bash
+      //- //-     code.
+      //- //-       $ sudo npm install -g titanium
+      //- //-       $ titanium setup
+      
+      //- //- section
+      //- //-   h2 Alloy MVC
+      //- //-   p project/app/..
+      //- //-   img(src="./images/compile/alloy.png",width="750px")
+
+      //- //- section
+      //- //-   h2 After Alloy Compile
+      //- //-   p project/Resource/app/..
+      //- //-   img(src="./images/compile/afteralloy.png",width="550px")
+
+      //- //- section
+      //- //-   h2 After Titanium Compile
+      //- //-   p build/..
+      //- //-   img(src="./images/compile/iphone.png",width="400px")
+      //- //-   br
+      //- //-   img(src="./images/compile/android.png",width="400px")
+
+      //- //- section
+      //- //-   h2 Ti current
+      //- //-   img(src="./images/ticurrent.png",style="width:150px")
+      //- //- section
+      //- //-   h2 Build & Run
+      //- //-   ul.white.fa-ul(style="text-align:left")
+      //- //-     li.bullet
+      //- //-       i.fa-li.fa.fa-check
+      //- //-       | Code change
+      //- //-     li.bullet
+      //- //-       i.fa-li.fa.fa-check
+      //- //-       | Compile of Alloy (MVC)
+      //- //-     li.bullet
+      //- //-       i.fa-li.fa.fa-check
+      //- //-       | Compile of Titanium
+      //- //-     li.bullet
+      //- //-       i.fa-li.fa.fa-check
+      //- //-       | Compile of Xcode/Android
+      //- //-     li.bullet
+      //- //-       i.fa-li.fa.fa-check
+      //- //-       | Deploying the app
+      //- //-     li.bullet
+      //- //-       i.fa-li.fa.fa-check
+      //- //-       | Starting the app
+      //- //-     li.bullet
+      //- //-       i.fa-li.fa.fa-check
+      //- //-       | Loading the code
+
+      //- section.light(data-bespoke-state='white')
+      //-   p
+      //-    img(src="./images/ti.png",style="width:300px")
+      //-   h2 선발시 활동 계획
+
+      //- section(style="padding:0",data-bespoke-state='xecon')
+      //-   img(src="./images/plan1.jpg",width="640px")
+
+      //- section(style="padding:0",data-bespoke-state='xecon')
+      //-   img(src="./images/plan2.jpg",width="640px")
+
+      //- section.light(data-bespoke-state='white')
+      //-   p
+      //-    img(src="./images/ti.png",style="width:300px")
+      //-   h2 활동 내용
+
+      //- section.gif.gif--licky
+      //-   span.small_title.darkbg 활동내용 1. 커미터가 되겠습니다.
+      //-   //- img(src="./images/licky.svg",width="150px")
+      //-   h1 &nbsp;
+      //-   h1 &nbsp;
+      //-   h2 &nbsp;
+      //-   h2.darkbg
+      //-     | 먹기 전에 사진 찍는 SNS
+      //-     br 
+      //-     a(href="http://licky.co") Licky
+
+      //- section
+      //-   span.small_title.darkbg 활동내용 1. 커미터가 되겠습니다.
+      //-   h2 Titanium으로  
+      //-     strong.red.whitebg Mobile App
+      //-   h2 ACS로 
+      //-     strong.red.whitebg 백엔드 API 서버
+      //-   h2 Node.ACS로 
+      //-     strong.red.whitebg 웹서비스
+
+      //-  section
+      //-   table
+      //-     tr
+      //-       td
+      //-         img(src="./images/licky.svg",width="200px")
+      //-       td
+      //-         h1
+      //-           i.fa.fa-github.fa-3x
+      //-   h3 소스도 오픈 
+      //-     a(href="https://github.com/yoda-united/licky",target="_blank") github.com/yoda-united/licky
+
+      //- section
+      //-   span.small_title.darkbg 활동내용 1. 커미터가 되겠습니다.
+      //-   img(src="./images/ti.png",style="width:150px")
+      //-   h2 Titanium 관련
+      //-     br 
+      //-     | 도구 제작 및 공개
+      //-   ul.fa-ul.left
+      //-     li
+      //-       i.fa-li.fa.fa-angle-right
+      //-       | Dev.tiapp (
+      //-       i.fa.fa-star
+      //-       |  14, 
+      //-       i.fa.fa-code-fork
+      //-       |  6)
+
+      //-     li
+      //-       i.fa-li.fa.fa-angle-right
+      //-       | Gulpfile-timodule (
+      //-       i.fa.fa-star
+      //-       |  12, 
+      //-       i.fa.fa-code-fork
+      //-       |  2)
+      //-     li
+      //-       i.fa-li.fa.fa-angle-right
+      //-       | ipselector (
+      //-       i.fa.fa-download
+      //-       |  541 in the last month)
+
+        
+      //- section
+      //-   span.small_title.darkbg 활동내용 1. 커미터가 되겠습니다.
+      //-   img(src="./images/ti.png",style="width:150px")
+      //-   h2 모바일 SDK 개선 활동
+      //-   ul.fa-ul.left
+      //-     li
+      //-       i.fa-li.fa.fa-angle-right
+      //-       | Pull Request 및 버그 리포팅
+
+      //- section
+      //-   span.small_title.darkbg 활동내용 1. 커미터가 되겠습니다.
+      //-   img(src="./images/ti.png",style="width:100px")
+      //-   h2 타이타늄 관련 3rd-party
+      //-     br
+      //-     | 프로젝트 참여
+      //-   ul.fa-ul.left
+      //-     li
+      //-       i.fa-li.fa.fa-angle-right
+      //-       | TiShadow
+      //-     li
+      //-       i.fa-li.fa.fa-angle-right
+      //-       | TiNy CLI
+      //-     li
+      //-       i.fa-li.fa.fa-angle-right
+      //-       | ticonfig
+      //-     li
+      //-       i.fa-li.fa.fa-angle-right
+      //-       | ti.adam
+      //-     li
+      //-       i.fa-li.fa.fa-angle-right
+      //-       | REST API adapter
+      //-     li
+      //-       i.fa-li.fa.fa-angle-right
+      //-       | TiGMap
+
+      //- section
+      //-   span.small_title.darkbg 활동내용 2. 타이타늄 커뮤니티 활동
+      //-   img(src='./images/badge/tidev.png',style="width:150px;")
+      //-   h2 한국 타이타늄 사용자 모임
+      //-   h3 http://tidev.kr
+      //-   ul.fa-ul.left
+      //-     li
+      //-       i.fa-li.fa.fa-angle-right
+      //-       | 포럼 등록 가입자 : 약 240명
+      //-     li
+      //-       i.fa-li.fa.fa-angle-right
+      //-       | Facebook 그룹 멤버 : 약 310명
+
+      //- section
+      //-   span.small_title.darkbg 활동내용 2. 타이타늄 커뮤니티 활동
+      //-   h2 외부 타이타늄 소개 활동
+      //-   ul
+      //-     li
+      //-       img(src="./images/xecon.jpg",width="300px")
+      //-     li
+      //-       img(src="./images/openfall.png",width="300px",style="background-color:white")
+      //-     li
+      //-       img(src="./images/sencha.png",width="200px")
+
+      //- section.light(data-bespoke-state='white')
+      //-   p
+      //-     img(src="./images/ti.png",style="width:300px")
+      //-   h2 향후 추진방향
+
+      //- section
+      //-   h2.bullet
+      //-     i.fa.fa-clock-o.fa-2x
+      //-     |  지난 5개월..
+      //-   h3.bullet 이제 시작..
+
+      //- section
+      //-   h1 꾸준히
+      //-   h2
+      //-     ul.fa-ul.left
+      //-       li
+      //-         i.fa.fa-li.fa-wrench
+      //-         | 만들고
+      //-       li
+      //-         i.fa.fa-li.fa-github
+      //-         | 공개하고
+      //-       li
+      //-         i.fa.fa-li.fa-comments
+      //-         | 교류하겠습니다. 
+
+      //- section
+      //-   h1 2015
+      //-   h3
+      //-     ul.fa-ul.left
+      //-       li
+      //-         i.fa.fa-li.fa-globe
+      //-         | 영어 문서화 및 홍보
+      //-       li
+      //-         i.fa.fa-li.fa-rocket
+      //-         | SNS Bootstrap (Ti, ACS, Node.ACS)
+      //-       li
+      //-         i.fa.fa-li.fa-microphone
+      //-         | 해외 컨퍼런스 발표 or 국내 개최
+
+
+      //- section
+      //-   h1 감사합니다.
+        
+
+
+
+
+      //- section
+      //-   h2 JS기반 Full-stack 개발
+      //-   h3 서버, 웹, 앱, 하드웨어..
+
+
+
+    
+        
+
+      //- section
+      //-   h2 Yo Studio,
+      //-   h2 NIPA 오픈 프론티어
+
+
+      //- section
+      //-   h1
+      //-     i.fa.fa-graduation-cap.fa-2x
+      //-     br
+      //-     | C++
+
+      //- section
+      //-   h1
+      //-     i.fa.fa-building-o.fa-2x
+      //-   img(src="./images/daum_logo.svg",width="200px")
+      //-   h2.bullet ActionScript, JavaScript
+      //-   h2.bullet HTML, CSS
+      //-   h2.bullet Objective-C
+     
+      //- //- section
+      //- //-   h2
+      //- //-     i.fa.fa-gamepad.fa-3x
+      //- //-     br
+      //- //-     | 취미로 시작한 Titanium
+      //- //-   p
+      //- //-    img(src="./images/ti.png",style="width:200px")
+      //- //- section.gif.gif--typing
+        
+
+    script(src='build/build.js')
