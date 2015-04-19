@@ -3,7 +3,7 @@ html
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-    title 3세대 플랫폼의 프론트엔드 개발기법
+    title JS2Native
 
     link(rel='stylesheet', type='text/css', href='build/build.css')
     link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
@@ -20,24 +20,25 @@ html
     - var smallTitle ='';
     article
 
-      section(style="background-color:black")
-        h1  
+      //- section(style="background-color:black")
+      //-   h1  
 
       section.light(data-bespoke-state='white')
 
-        h2 3세대 플랫폼의
-          br
-        h1.red 프론트엔드
-        h1 개발기법
+        //- h2 3세대 플랫폼의
+        //-   br
+        h1.red Titanium
+        //- h1 개발기법
         br
-        h4 2015.03.20.
+        h4 2015.04.15.
         h4 이종은
 
 
 
       section
         //- img(src="")
-        img(src="./images/yostudio_logo.svg",width="300px")
+        //- img(src="./images/yostudio_logo.svg",width="300px")
+        img.circle(src="./images/jong.png",width="150px")
         h2 이종은
         h3
           i.fa.fa-heart.red
@@ -49,226 +50,31 @@ html
           a(href="https://github.com/yomybaby",target="_blank")  yomybaby
           br
           img(src='./images/badge/tidev.png',width="25px")
-          |   한국 타이타늄 사용자 모임 (tidev.kr)
+          |   tidev.kr
         
       section
         h1 
           i.fa.fa-heart.fa-3x.red
-        h2 Creative Commons,
-        h2 Open Source
+        h3.bullet Titanium에 대한 이야기만
+        h3.bullet 하지 않고 요즘 관심사
 
       section
-        h1.bullet 어려움 하나
-        h3.bullet 여러분을 오늘 처음 만났다.
-      
-      section
-        h2 여러분은 누구인가요?
-
-      section
-        h2 오늘의 이야기는..
-        //- h3 
-
-      section
-        h3 옛날
-        h2 인터넷 서비스 (=웹)
-        h3 클라이언트 : PC(브라우저)
-
-      section
-        h3 오늘날
-        h2 인터넷 서비스 (=웹+앱+..)
-        h3 클라이언트 : PC, 모바일, IoT..
-
-      section
-        h1.bullet 복잡
-        h2.bullet 많은 
-          span.red  변화
-          | 와  
-          span.red 발전
-
-      section
-        h2 FRONT-END의 
-          span.red  변화
-          | 와  
-          span.red 발전
-        h3 도구와 라이브러리 중심으로..
-
-      section
-        h2 목차
-        h3
-          ul.fa-ul.left
-            li
-              i.fa.fa-ul.fa-angle-right
-              |  '변화' - 서버 중심에서 클라이언트 중심으로
-            li
-              i.fa.fa-ul.fa-angle-right
-              |  '프론트엔드 기법1' - 생산성 높이기
-            li
-              i.fa.fa-ul.fa-angle-right
-              |  '프론트엔드 기법2' - 웹의 애플리케이션화
-            li
-              i.fa.fa-ul.fa-angle-right
-              |  '프론트엔드 기법3' - 서버부터 네이티브앱까지
-        br
-        h4.normal (부록1: 생산성을 위한 도구 소개, 부록2: 헷갈리는 JavaScript)
-
-      section.light(data-bespoke-state='white')
-        h1 진행안내
-
-      section
-        h1
-          | There are NO stupid question.
-      
-      section
-        h1 
-          i.fa.fa-star-half-o.fa-2x.red
-        h2.bullet 이 시간의 반쪽은
-          br
-          | 여러분의 질문으로 완성됩니다.
-        br
-        div.bullet 
-          h3         
-            i.fa.fa-heart.red
-            |  REAL 후기
-          | - 
-          span.red 어떠한 질문이든 다 받아주시던 점
-          | 이 좋았습니다.
-          br
-          | - 질문에 대한 
-          span.red 답변을 상세히
-          |  해주어서 좋았습니다.
-          br
-          | - 질의에 
-          span.red  열정적으로
-          |  응답하는 모습이 좋았습니다.
-
-      section
-        h1.bullet 오늘은
-        h1.bullet 함께
-        h1.bullet 편안하게
-
-      section.light(data-bespoke-state='white')
-        h1
-          i.fa.fa-random.fa-3x
-        h1 1. 변화
-        h3 서버 중심에서 클라이언트 중심으로
-
-      section
-        h2.bullet 서버와 클라이언트의 역할 변화
-        h1.bullet
-          i.fa.fa-mobile
-        h1
-          i.fa.fa-server
-          | &nbsp;&nbsp;&nbsp;
-          i.fa.fa-desktop
-          | &nbsp;&nbsp;&nbsp;
-          i.fa.fa-user
-        h1.bullet
-          i.fa.fa-tablet
-        h3.bullet (그림을 그려가며 설명)
-
-      section
-        h2 서버의 역할의 단순화
-        h3 서버 기술의 고도화
-
-      section
-        h2.bullet API 서버화
-        pre.bullet
-          code.
-            POST http://api/createUser.php
-            POST http://api/getUserList.php
-        pre.bullet
-          code.
-            POST http://api/user.json?method=create
-            POST http://api/user.json?method=list&gender=man
-        h1.bullet
-          i.fa.fa-ban.red
-          |  나쁜 예
-      
-      section
-        h2 RESTful API
-        h3
-          ul
-            li URI : Resource(대상)
-            li Method : 동작
-            li (Data)
-
-      section
-        h2.bullet CRUD
-        h3
-          ul
-            li.bullet POST : Create
-            li.bullet GET : Read
-            li.bullet PUT : Update
-            li.bullet DELETE : Delete
-            li.bullet 
-              br
-              | HEAD : 존재 여부
-
-      section
-        h2 RESTful API
-        h3 
-          ul
-            li 
-              i.fa.fa-star.yellow
-              |  http만 된다면 어떤 장비에서든 
-            li 
-              i.fa.fa-star.yellow
-              |  같은 방식이기에 누구나 쉽게
-
-      section
-        h1 백엔드의 서비스화
-        h2 IaaS
-        h3 (Infra as a Service)
-        h2 PaaS
-        h3 (Platform as a Service)
-        h2 BaaS
-        h3 (Back-end as a Service)
-
-      section
-        h2 다양한 BaaS
-        hr
-        ul
-          li
-            img(src="https://parse.com/images/parse-logo.png",width="100px")
-          li
-            img(src="http://www.kinvey.com/images/kinvey-logo-navbar.png")
-          li
-            img(src="https://developers.sktelecom.com/resources/images/logo.gif",width="100px")
-          li
-            img(src="https://baas.io/images/logo_origin.png",width="100px")
-      section
-        h3
-          ul
-            li Back-end : Java, PHP, Node.js, Ruby, Python, ..
-            li Front-end(web) : JavaScript, HTML, CSS,.. 
-            li Front-end(app) : Objective-C, Java, JavaScript, C#..
-            li DB : mysql, Oracle, Mongodb, ..
-            li 
-
-      section(style="transition:none !important")
-        h3
-          ul
-            li Back-end : Java, PHP, 
-              span.red Node.js
-              | , Ruby, Python, ..
-            li Front-end(web) : 
-              span.red JavaScript
-              | , HTML, CSS,.. 
-            li Front-end(app) : Objective-C, Java, 
-              span.red JavaScript
-              | , C#..
-            li DB : mysql, Oracle, 
-              span.red Mongodb
-              | , ..
+        h2 그래봐야..
 
       section
         h1
           i.fa.fa-heart.fa-3x.red
-          br
+        h2
           span.red ONE LOVE
           br.bullet
           span.bullet JavaScript
+        h3.bullet Titanium 관련..
       
+      section
+        h1.bullet 오늘은
+        h1.bullet 편안하게
+        h1.bullet 수다
+
       section
         h1
           i.fa.fa-rocket.fa-4x.red
@@ -291,33 +97,14 @@ html
 
       section
         h2 브라우저 밖으로 탈출!!
-      section
-        h1 Node.js
-        h1 생태계
-        span.fa-4x💧🌼🐝🍯🐻
 
       section
-        h2 웹을 넘어
-        h1 개발 도구
-        h3 (test, build.. on NPM)
+        span.fa-5x.green.bullet 우물 안 🐸
+        h2.bullet DOM만 가지고 놀던 아이
 
       section
-        h2 웹을 넘어   
-        h1 Native App
-        h3 (Titanium, React Native, NativeScript..)
-
-      section
-        h2 웹을 넘어
-        h1 하드웨어까지
-        h3 (
-          a(href="http://spark.io") Spark
-          | , 라즈베리파이..)
-
-      section.light(data-bespoke-state='white')
-        h1
-          i.fa.fa-wrench.fa-3x
-        h2 2. 생산성 높이기
-
+        span.fa-5x 🚣
+        h1 탈출
       section
         img(src="https://nodejs.org/images/logo.svg",width="200px")
         h2
@@ -334,84 +121,78 @@ html
           i.fa.fa-thumbs-o-up
 
       section
-        h1
-          i.fa.fa-question.fa-3x
-        h2.bullet Q. 이 발표자료는
-          br 
-          | 무엇으로 만든걸까요?
-        h3.bullet 파워포인트? 키노트?
-        h3.bullet.strong.red A. HTML, CSS, JavaScript
+        h1 Node.js
+        h1 생태계
+        span.fa-4x💧🌼🐝🍯🐻
 
       section
-        h2.bullet Bespoke.js
-        h3.bullet (구경해볼까요)
-        //- h2
-        //-   i.fa.fa-wrench
-        //- h3 gulp, yeoman, jade, bower, stylus..
+        h2 브라우저을 넘어
+        h1 개발 도구
+        h3 (test, build.. on NPM)
+
+
+      section
+        h2 브라우저을 넘어
+        h1 하드웨어까지
+        h3 (
+          a(href="http://spark.io") Spark
+          | , 라즈베리파이..)
+
+      section
+        h2 브라우저을 넘어   
+        h1 Native App
+        h3 (Titanium, React Native, NativeScript..)
+
+      section.light(data-bespoke-state='white')
+        h1 JS to Native
+
+      section
+        h1 어떻게 JS가 Native를?
+
+      section
+        h3 브라우저에 존재하는
+        h2 두 가지 Land
+        span.fa-5x.bullet ⛳ 〰〰〰 ⛳
+        h2.bullet JS & DOM
+
+      section
+        h2 Keynote로 설명..
+
+      section
+        h3.bullet 브라우저와의 차이점
+        h2.bullet 
+          span.red Block
+          |  vs. 
+          span.red Non-block
+
+      section
+        h2 JS to Titanium 
       
       section
-        h2 HTML 템플릿
-        h3 
-          ul
-            li 
-              a(href="http://jade-lang.com/reference/filters/",target="_blank") jade
-            li 
-              a(href="http://ejs.co/",target="_blank") ejs
-            //- li 
-            //-   a(href="http://jade-lang.com/reference/filters/",target="_blank") jade
-      
-      section
-        h2 CSS
-        h3
-          ul
-            li 
-              a(href="http://lesscss.org/",target="_blank") less
-            li 
-              a(href="http://sass-lang.com/",target="_blank") sass
-            li 
-              a(href="http://learnboost.github.io/stylus",target="_blank") stylus
-            li
-              a(href="https://github.com/postcss/autoprefixer",target="_blank") autoprefixer
+        ul
+          li
+            h2 Titanium 
+              span.small_font by Appcelerator
+          li
+            h2 React Native 
+              span.small_font by facebook
+          li
+            h2 NativeScript 
+              span.small_font by Telerik
+          li
+            h2 Tabris.js 
+              span.small_font by EclipseSource
 
       section
-        h2 자동화
-        h3
-          ul
-            li 
-              a(href="http://gulpjs.com/",target="_blank") gulp.js
-            li 
-              a(href="http://gruntjs.com/",target="_blank") grunt.js
-
-      section
-        h3 grunt
-        img(src="http://jaysoo.ca/images/grunt-flow-2.png",style="background-color:white;",width="500px")
-        hr 
-        h3 gulp
-        img(src="http://jaysoo.ca/images/gulp-flow.png",style="background-color:white;",width="500px")
-
-      section
-        h2 그외 
-        h3
-          ul
-            li 
-              a(href="http://yeoman.io/",target="_blank") yeoman(yo) : 스캐폴딩 툴
-            li 
-              a(href="http://bower.io/",target="_blank") bower : 브라우저용 패키지 매니저
-
-      section
-        h2 한번 해볼까요?
-        pre
-          code.
-            npm install -g generator-bespoke bower gulp
-        h3 (git 설치 필요)
+        h2 살짝만 구경해볼까요?
 
       section.light(data-bespoke-state='white')
         h1
           i.fa.fa-cubes.fa-3x
-        h2 3. 웹의 애플리케이션화 (MV*)
+        h2 웹의 애플리케이션화 (MV*)
 
       section
-        img(src="https://developer.chrome.com/static/images/jstransferrequests.png",width="500px")
+        img(src="http://developer.chrome.com/static/images/jstransferrequests.png",width="500px")
         h3 JS 용량이 1년사이에 45%증가
 
       section
@@ -426,33 +207,8 @@ html
         h2.bullet 전체를 어떤 구조로 짤 것인가?
 
       section
-        h2  utils.js, commons.js에 
-          br
-          | 따 때려 넣기
-        pre.language-javascript.small_font
-          code.
-            common.getUserData = function(){
-              //...
-              common.getProfileUrl(userId)
-              //...
-            }
-
-            common.getProfileUrl = function(userId){
-              //...
-            }
-
-            common.dateFormat = function(str){
-            }
-
-      section
-        h1
-          i.fa.fa-flag-checkered
-        h2 유지보수
-        h2 재사용
-
-      section
         h2 디자인 패턴
-        h2 MVC
+        h1 MVC
         h3 (Model-View-Controller)
 
       section
@@ -461,7 +217,7 @@ html
 
       section
         h2 클라이언트의 MVC
-        img(src="https://developer.chrome.com/static/images/mvc.png")
+        img(src="http://developer.chrome.com/static/images/mvc.png")
 
       section
         h2 서버의 MVC : 정적
@@ -471,274 +227,732 @@ html
         h3 사용자 액션 = Event
 
       section
-        h2.bullet 이 코드는 어디에 넣지?
-        h2.bullet Independent components
-        h3.bullet (예: 밥을 준비한 엄마)
+        h2 MVC의 문제
+        h3 key value observation
+        pre
+          code.language-javascript.
+            book.on("change:title change:author", function(model){
+              // to something.
+            });
 
       section
-        h2 JS MV*
-        h3 
-          a(href="http://angularjs.org",target="_blank") Angular.js, 
-          a(href="http://backbonejs.org",target="_blank") Backbone.js, 
-          a(href="http://reactjs.org",target="_blank") React.js, 
-          a(href="http://emberjs.com",target="_blank") Ember.js..
+        h3 애플리케이션이 커질수록 사고의 흐름이 복잡
 
       section
-        h2 예제로 살펴보기
-        h3
-          a(href="http://curran.github.io/screencasts/introToAngular/exampleViewer/#/",target="_blank") Angular 50 examples
+        h3.bullet Virtual DOM 의식의 흐림이 단순
+        h4.bullet 성능은 React가 알아서 한다.
 
-      section.light(data-bespoke-state='white')
+      section
         h1
-          i.fa.fa-server.fa-2x
-          | &nbsp;&nbsp;&nbsp;
-          i.fa.fa-mobile.fa-2x
-        h2 4. 서버, 그리고 네이티브앱까지
-        h3 (Full-stack)
+          i.fa.fa-facebook.fa-3x.blue
+        h3 Facebook이 보장하는 크로스 브라우징
 
       section
-        h2 JS로 네이티브앱을 만든다.
-        h3 Titanium, Reacti Native, NativeScript
+        h1 React
+        h3.bullet 아직 훑어보는 수준
+        h2.bullet 함께 스터디?
 
       section
-        h2 혹시 모바일에 네이티브 껍데기?
-        img(src="./images/phoneGap.png",width="200px",style="border-radius: 100px;background-color:white")
-        h3 (PhoneGap류)
+        h1(style="padding-left:200px") 끝
+        //-   br
+        //-   | 여기까지입니다.
+        h2(style="padding-left:200px") 감사합니다.
 
-      section.light.gif.gif--no2
-        h1 NO!
 
-      section
-        h2 그럼 어떻게 동작하는 것인가?
-        h3 (키노트로 설명)
 
-      section(data-bespoke-state='puple')
-        h1.white
+
+
+      //- section
+
+      //- section
+
+      //- section
+
+
+
+      //- section
+      //-   h1.bullet 어려움 하나
+      //-   h3.bullet 여러분을 오늘 처음 만났다.
+      
+      //- section
+      //-   h2 여러분은 누구인가요?
+
+      //- section
+      //-   h2 오늘의 이야기는..
+      //-   //- h3 
+
+      //- section
+      //-   h3 옛날
+      //-   h2 인터넷 서비스 (=웹)
+      //-   h3 클라이언트 : PC(브라우저)
+
+      //- section
+      //-   h3 오늘날
+      //-   h2 인터넷 서비스 (=웹+앱+..)
+      //-   h3 클라이언트 : PC, 모바일, IoT..
+
+      //- section
+      //-   h1.bullet 복잡
+      //-   h2.bullet 많은 
+      //-     span.red  변화
+      //-     | 와  
+      //-     span.red 발전
+
+      //- section
+      //-   h2 FRONT-END의 
+      //-     span.red  변화
+      //-     | 와  
+      //-     span.red 발전
+      //-   h3 도구와 라이브러리 중심으로..
+
+      //- section
+      //-   h2 목차
+      //-   h3
+      //-     ul.fa-ul.left
+      //-       li
+      //-         i.fa.fa-ul.fa-angle-right
+      //-         |  '변화' - 서버 중심에서 클라이언트 중심으로
+      //-       li
+      //-         i.fa.fa-ul.fa-angle-right
+      //-         |  '프론트엔드 기법1' - 생산성 높이기
+      //-       li
+      //-         i.fa.fa-ul.fa-angle-right
+      //-         |  '프론트엔드 기법2' - 웹의 애플리케이션화
+      //-       li
+      //-         i.fa.fa-ul.fa-angle-right
+      //-         |  '프론트엔드 기법3' - 서버부터 네이티브앱까지
+      //-   br
+      //-   h4.normal (부록1: 생산성을 위한 도구 소개, 부록2: 헷갈리는 JavaScript)
+
+      //- section.light(data-bespoke-state='white')
+      //-   h1 진행안내
+
+      //- section
+      //-   h1
+      //-     | There are NO stupid question.
+      
+      //- section
+      //-   h1 
+      //-     i.fa.fa-star-half-o.fa-2x.red
+      //-   h2.bullet 이 요간의 반쪽은
+      //-     br
+      //-     | 여러분의 질문으로 완성됩니다.
+      //-   br
+      //-   div.bullet 
+      //-     h3         
+      //-       i.fa.fa-heart.red
+      //-       |  REAL 후기
+      //-     | - 
+      //-     span.red 어떠한 질문이든 다 받아주시던 점
+      //-     | 이 좋았습니다.
+      //-     br
+      //-     | - 질문에 대한 
+      //-     span.red 답변을 상세히
+      //-     |  해주어서 좋았습니다.
+      //-     br
+      //-     | - 질의에 
+      //-     span.red  열정적으로
+      //-     |  응답하는 모습이 좋았습니다.
+
+      //- section
+      //-   h1.bullet 오늘은
+      //-   h1.bullet 함께
+      //-   h1.bullet 편안하게
+
+      //- section.light(data-bespoke-state='white')
+      //-   h1
+      //-     i.fa.fa-random.fa-3x
+      //-   h1 1. 변화
+      //-   h3 서버 중심에서 클라이언트 중심으로
+
+      //- section
+      //-   h2.bullet 서버와 클라이언트의 역할 변화
+      //-   h1.bullet
+      //-     i.fa.fa-mobile
+      //-   h1
+      //-     i.fa.fa-server
+      //-     | &nbsp;&nbsp;&nbsp;
+      //-     i.fa.fa-desktop
+      //-     | &nbsp;&nbsp;&nbsp;
+      //-     i.fa.fa-user
+      //-   h1.bullet
+      //-     i.fa.fa-tablet
+      //-   h3.bullet (그림을 그려가며 설명)
+
+      //- section
+      //-   h2 서버의 역할의 단순화
+      //-   h3 서버 기술의 고도화
+
+      //- section
+      //-   h2.bullet API 서버화
+      //-   pre.bullet
+      //-     code.
+      //-       POST http://api/createUser.php
+      //-       POST http://api/getUserList.php
+      //-   pre.bullet
+      //-     code.
+      //-       POST http://api/user.json?method=create
+      //-       POST http://api/user.json?method=list&gender=man
+      //-   h1.bullet
+      //-     i.fa.fa-ban.red
+      //-     |  나쁜 예
+      
+      //- section
+      //-   h2 RESTful API
+      //-   h3
+      //-     ul
+      //-       li URI : Resource(대상)
+      //-       li Method : 동작
+      //-       li (Data)
+
+      //- section
+      //-   h2.bullet CRUD
+      //-   h3
+      //-     ul
+      //-       li.bullet POST : Create
+      //-       li.bullet GET : Read
+      //-       li.bullet PUT : Update
+      //-       li.bullet DELETE : Delete
+      //-       li.bullet 
+      //-         br
+      //-         | HEAD : 존재 여부
+
+      //- section
+      //-   h2 RESTful API
+      //-   h3 
+      //-     ul
+      //-       li 
+      //-         i.fa.fa-star.yellow
+      //-         |  http만 된다면 어떤 장비에서든 
+      //-       li 
+      //-         i.fa.fa-star.yellow
+      //-         |  같은 방식이기에 누구나 쉽게
+
+      //- section
+      //-   h1 백엔드의 서비스화
+      //-   h2 IaaS
+      //-   h3 (Infra as a Service)
+      //-   h2 PaaS
+      //-   h3 (Platform as a Service)
+      //-   h2 BaaS
+      //-   h3 (Back-end as a Service)
+
+      //- section
+      //-   h2 다양한 BaaS
+      //-   hr
+      //-   ul
+      //-     li
+      //-       img(src="https://parse.com/images/parse-logo.png",width="100px")
+      //-     li
+      //-       img(src="http://www.kinvey.com/images/kinvey-logo-navbar.png")
+      //-     li
+      //-       img(src="https://developers.sktelecom.com/resources/images/logo.gif",width="100px")
+      //-     li
+      //-       img(src="https://baas.io/images/logo_origin.png",width="100px")
+      //- section
+      //-   h3
+      //-     ul
+      //-       li Back-end : Java, PHP, Node.js, Ruby, Python, ..
+      //-       li Front-end(web) : JavaScript, HTML, CSS,.. 
+      //-       li Front-end(app) : Objective-C, Java, JavaScript, C#..
+      //-       li DB : mysql, Oracle, Mongodb, ..
+      //-       li 
+
+      //- section(style="transition:none !important")
+      //-   h3
+      //-     ul
+      //-       li Back-end : Java, PHP, 
+      //-         span.red Node.js
+      //-         | , Ruby, Python, ..
+      //-       li Front-end(web) : 
+      //-         span.red JavaScript
+      //-         | , HTML, CSS,.. 
+      //-       li Front-end(app) : Objective-C, Java, 
+      //-         span.red JavaScript
+      //-         | , C#..
+      //-       li DB : mysql, Oracle, 
+      //-         span.red Mongodb
+      //-         | , ..
+
+      //- section
+      //-   h1
+      //-     i.fa.fa-heart.fa-3x.red
+      //-     br
+      //-     span.red ONE LOVE
+      //-     br.bullet
+      //-     span.bullet JavaScript
+      
+      //- section
+      //-   h1
+      //-     i.fa.fa-rocket.fa-4x.red
+      //-   h2 JavaScript
+
+      //- section
+      //-   h1
+      //-     img(src="https://nodejs.org/images/logo.svg",width="300px")
+
+      //- section
+      //-   h1 Google V8
+
+      //- section
+      //-   h1.bullet 
+      //-     i.fa.fa-eye.fa-2x
+      //-   h1&nbsp;&nbsp;&nbsp;&nbsp;
+      //-     img(src="https://nodejs.org/images/logo.svg",width="200px")
+      //-   h2.bullet JS로 서버를..
+      //-   h2.bullet Socket.io..
+
+      //- section
+      //-   h2 브라우저 밖으로 탈출!!
+      //- section
+      //-   h1 Node.js
+      //-   h1 생태계
+      //-   span.fa-4x💧🌼🐝🍯🐻
+
+      //- section
+      //-   h2 웹을 넘어
+      //-   h1 개발 도구
+      //-   h3 (test, build.. on NPM)
+
+      //- section
+      //-   h2 웹을 넘어   
+      //-   h1 Native App
+      //-   h3 (Titanium, React Native, NativeScript, tabris.js..)
+
+
+      //- section
+      //-   h2 웹을 넘어
+      //-   h1 하드웨어까지
+      //-   h3 (
+      //-     a(href="http://spark.io") Spark
+      //-     | , 라즈베리파이..)
+
+      //- section.light(data-bespoke-state='white')
+      //-   h1
+      //-     i.fa.fa-wrench.fa-3x
+      //-   h2 2. 생산성 높이기
+
+      //- section
+      //-   img(src="https://nodejs.org/images/logo.svg",width="200px")
+      //-   h2
+      //-     i.fa.fa-file-text-o.fa-3x
+      //-   h3 JS로 파일을 읽고 쓰다
+
+      //- section
+      //-   h2 프론트엔드 개발자
+      //-   h2.bullet JavaScript로
+      //-   h2.bullet 
+      //-     i.fa.fa-file-text-o
+      //-     |  파일을 다루는 도구를
+      //-   h2.bullet 직접 만들다 
+      //-     i.fa.fa-thumbs-o-up
+
+      //- section
+      //-   h1
+      //-     i.fa.fa-question.fa-3x
+      //-   h2.bullet Q. 이 발표자료는
+      //-     br 
+      //-     | 무엇으로 만든걸까요?
+      //-   h3.bullet 파워포인트? 키노트?
+      //-   h3.bullet.strong.red A. HTML, CSS, JavaScript
+
+      //- section
+      //-   h2.bullet Bespoke.js
+      //-   h3.bullet (구경해볼까요)
+      //-   //- h2
+      //-   //-   i.fa.fa-wrench
+      //-   //- h3 gulp, yeoman, jade, bower, stylus..
+      
+      //- section
+      //-   h2 HTML 템플릿
+      //-   h3 
+      //-     ul
+      //-       li 
+      //-         a(href="http://jade-lang.com/reference/filters/",target="_blank") jade
+      //-       li 
+      //-         a(href="http://ejs.co/",target="_blank") ejs
+      //-       //- li 
+      //-       //-   a(href="http://jade-lang.com/reference/filters/",target="_blank") jade
+      
+      //- section
+      //-   h2 CSS
+      //-   h3
+      //-     ul
+      //-       li 
+      //-         a(href="http://lesscss.org/",target="_blank") less
+      //-       li 
+      //-         a(href="http://sass-lang.com/",target="_blank") sass
+      //-       li 
+      //-         a(href="http://learnboost.github.io/stylus",target="_blank") stylus
+      //-       li
+      //-         a(href="https://github.com/postcss/autoprefixer",target="_blank") autoprefixer
+
+      //- section
+      //-   h2 자동화
+      //-   h3
+      //-     ul
+      //-       li 
+      //-         a(href="http://gulpjs.com/",target="_blank") gulp.js
+      //-       li 
+      //-         a(href="http://gruntjs.com/",target="_blank") grunt.js
+
+      //- section
+      //-   h3 grunt
+      //-   img(src="http://jaysoo.ca/images/grunt-flow-2.png",style="background-color:white;",width="500px")
+      //-   hr 
+      //-   h3 gulp
+      //-   img(src="http://jaysoo.ca/images/gulp-flow.png",style="background-color:white;",width="500px")
+
+      //- section
+      //-   h2 그외 
+      //-   h3
+      //-     ul
+      //-       li 
+      //-         a(href="http://yeoman.io/",target="_blank") yeoman(yo) : 스캐폴딩 툴
+      //-       li 
+      //-         a(href="http://bower.io/",target="_blank") bower : 브라우저용 패키지 매니저
+
+      //- section
+      //-   h2 한번 해볼까요?
+      //-   pre
+      //-     code.
+      //-       npm install -g generator-bespoke bower gulp
+      //-   h3 (git 설치 필요)
+
+      //- section.light(data-bespoke-state='white')
+      //-   h1
+      //-     i.fa.fa-cubes.fa-3x
+      //-   h2 3. 웹의 애플리케이션화 (MV*)
+
+      //- section
+      //-   img(src="https://developer.chrome.com/static/images/jstransferrequests.png",width="500px")
+      //-   h3 JS 용량이 1년사이에 45%증가
+
+      //- section
+      //-   h1
+      //-     i.fa.fa-line-chart.fa-3x
+      //-   h2 복잡해졌다
+      //-   h2 협업 필요
+
+      //- section
+      //-   h3 코드를 한줄 한줄 어떻게 짤것인가?
+      //-   h3.bullet 보다
+      //-   h2.bullet 전체를 어떤 구조로 짤 것인가?
+
+      //- section
+      //-   h2  utils.js, commons.js에 
+      //-     br
+      //-     | 따 때려 넣기
+      //-   pre.language-javascript.small_font
+      //-     code.
+      //-       common.getUserData = function(){
+      //-         //...
+      //-         common.getProfileUrl(userId)
+      //-         //...
+      //-       }
+
+      //-       common.getProfileUrl = function(userId){
+      //-         //...
+      //-       }
+
+      //-       common.dateFormat = function(str){
+      //-       }
+
+      //- section
+      //-   h1
+      //-     i.fa.fa-flag-checkered
+      //-   h2 유지보수
+      //-   h2 재사용
+
+      //- section
+      //-   h2 디자인 패턴
+      //-   h2 MVC
+      //-   h3 (Model-View-Controller)
+
+      //- section
+      //-   h2 서버의 MVC
+      //-   img(src="http://wiki.gurubee.net/download/attachments/26740980/7_mvcpattern.png")
+
+      //- section
+      //-   h2 클라이언트의 MVC
+      //-   img(src="https://developer.chrome.com/static/images/mvc.png")
+
+      //- section
+      //-   h2 서버의 MVC : 정적
+      //-   h3 사용자 액션 = Request
+      //-   hr
+      //-   h2 클라이언트의 MVC : 동적
+      //-   h3 사용자 액션 = Event
+
+      //- section
+      //-   h2.bullet 이 코드는 어디에 넣지?
+      //-   h2.bullet Independent components
+      //-   h3.bullet (예: 밥을 준비한 엄마)
+
+      //- section
+      //-   h2 JS MV*
+      //-   h3 
+      //-     a(href="http://angularjs.org",target="_blank") Angular.js, 
+      //-     a(href="http://backbonejs.org",target="_blank") Backbone.js, 
+      //-     a(href="http://reactjs.org",target="_blank") React.js, 
+      //-     a(href="http://emberjs.com",target="_blank") Ember.js..
+
+      //- section
+      //-   h2 예제로 살펴보기
+      //-   h3
+      //-     a(href="http://curran.github.io/screencasts/introToAngular/exampleViewer/#/",target="_blank") Angular 50 examples
+
+      //- section.light(data-bespoke-state='white')
+      //-   h1
+      //-     i.fa.fa-server.fa-2x
+      //-     | &nbsp;&nbsp;&nbsp;
+      //-     i.fa.fa-mobile.fa-2x
+      //-   h2 4. 서버, 그리고 네이티브앱까지
+      //-   h3 (Full-stack)
+
+      //- section
+      //-   h2 JS로 네이티브앱을 만든다.
+      //-   h3 Titanium, Reacti Native, NativeScript
+
+      //- section
+      //-   h2 혹시 모바일에 네이티브 껍데기?
+      //-   img(src="./images/phoneGap.png",width="200px",style="border-radius: 100px;background-color:white")
+      //-   h3 (PhoneGap류)
+
+      //- section.light.gif.gif--no2
+      //-   h1 NO!
+
+      //- section
+      //-   h2 그럼 어떻게 동작하는 것인가?
+      //-   h3 (키노트로 설명)
+
+      //- section(data-bespoke-state='puple')
+      //-   h1.white
           
-          |  DEMO TIME!
-        ul.white
-          li
-            i.fa.fa-wrench
-            span.light  BUILD :
-            |  Titanium Studio / Ti CLI
-          li
-            i.fa.fa-cube 
-            |  MVC : Alloy
-          li
-            i.fa.fa-cloud
-            |  REST API adapter
-          li 
-            i.fa.fa-rocket
-            |  AWESOME : TiShadow
-          li
-            i.fa.fa-puzzle-piece
-            |  FANTASTIC 3rd party tools..
+      //-     |  DEMO TIME!
+      //-   ul.white
+      //-     li
+      //-       i.fa.fa-wrench
+      //-       span.light  BUILD :
+      //-       |  Titanium Studio / Ti CLI
+      //-     li
+      //-       i.fa.fa-cube 
+      //-       |  MVC : Alloy
+      //-     li
+      //-       i.fa.fa-cloud
+      //-       |  REST API adapter
+      //-     li 
+      //-       i.fa.fa-rocket
+      //-       |  AWESOME : TiShadow
+      //-     li
+      //-       i.fa.fa-puzzle-piece
+      //-       |  FANTASTIC 3rd party tools..
 
-      section
-        h1 BaaS
-        a(href="https://strongloop.com/",target="_blank")
-          img(src="data:image/png;base64,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",
-            style="background-color:white")
+      //- section
+      //-   h1 BaaS
+      //-   a(href="https://strongloop.com/",target="_blank")
+      //-     img(src="data:image/png;base64,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",
+      //-       style="background-color:white")
     
-      section.light(data-bespoke-state='white')
-        h3 
-          i.fa.fa-bookmark.red
-          |  부록A
-        span.fa-4x 🔧
-        h2 생산성을 위해 애용하는 도구 소개
-        h3 dash, alfred, charles, postman, gas mask,
-          br
-          | cloud app..
+      //- section.light(data-bespoke-state='white')
+      //-   h3 
+      //-     i.fa.fa-bookmark.red
+      //-     |  부록A
+      //-   span.fa-4x 🔧
+      //-   h2 생산성을 위해 애용하는 도구 소개
+      //-   h3 dash, alfred, charles, postman, gas mask,
+      //-     br
+      //-     | cloud app..
 
-      section.light(data-bespoke-state='white',data-bespoke-hash="js")
-        h3 
-          i.fa.fa-bookmark.red
-          |  부록B
-        span.fa-4x 😲
-        h2 헷갈리는 JavaScript
+      //- section.light(data-bespoke-state='white',data-bespoke-hash="js")
+      //-   h3 
+      //-     i.fa.fa-bookmark.red
+      //-     |  부록B
+      //-   span.fa-4x 😲
+      //-   h2 헷갈리는 JavaScript
 
-      section
-        h2 장점 vs. 단점
+      //- section
+      //-   h2 장점 vs. 단점
 
-      section
-        h2 비교 연산자 == vs ===
-        pre
-          code.language-javascript.
-            var one= 1, oneString = '1' , t = true;
+      //- section
+      //-   h2 비교 연산자 == vs ===
+      //-   pre
+      //-     code.language-javascript.
+      //-       var one= 1, oneString = '1' , t = true;
 
-            console.log(one == oneString);
-            console.log(one == t);
-            console.log(oneString == t);
+      //-       console.log(one == oneString);
+      //-       console.log(one == t);
+      //-       console.log(oneString == t);
 
-            console.log(one === oneString);
-            console.log(one === t);
-            console.log(oneString === t);
-        a(data-bespoke-run)
-          | Run!
+      //-       console.log(one === oneString);
+      //-       console.log(one === t);
+      //-       console.log(oneString === t);
+      //-   a(data-bespoke-run)
+      //-     | Run!
 
-      section
-        h2 원시값의 복사
-        pre
-          code.language-javascript.
-            var p = 1;
-            var copyOfP = p;
-            p = 3;
-            console.log(copyOfP);
+      //- section
+      //-   h2 원시값의 복사
+      //-   pre
+      //-     code.language-javascript.
+      //-       var p = 1;
+      //-       var copyOfP = p;
+      //-       p = 3;
+      //-       console.log(copyOfP);
 
-            var myObject = {};
-            var copyOfMyObject = myObject;
-            myObject.foo = 'bar';
-            console.log(copyOfMyObject.foo);
-        a(data-bespoke-run)
-          | Run!
+      //-       var myObject = {};
+      //-       var copyOfMyObject = myObject;
+      //-       myObject.foo = 'bar';
+      //-       console.log(copyOfMyObject.foo);
+      //-   a(data-bespoke-run)
+      //-     | Run!
 
-      section
-        h2. 원시값의 비교
-        pre
-          code.language-javascript.
-            var p1 = 10;
-            var p2 = 10;
-            var p3 = new Number('10');
-            var p3_1 = Number('10');
-            var p4 = p3;
+      //- section
+      //-   h2. 원시값의 비교
+      //-   pre
+      //-     code.language-javascript.
+      //-       var p1 = 10;
+      //-       var p2 = 10;
+      //-       var p3 = new Number('10');
+      //-       var p3_1 = Number('10');
+      //-       var p4 = p3;
 
-            console.log(p1 === p2);
-            console.log(p1 === p3);
-            console.log(p3_1 === p3);
-            console.log(p1 === p3_1);
-            p4=10;
-            console.log(p4 === p3);
-        a(data-bespoke-run)
-          | Run!
+      //-       console.log(p1 === p2);
+      //-       console.log(p1 === p3);
+      //-       console.log(p3_1 === p3);
+      //-       console.log(p1 === p3_1);
+      //-       p4=10;
+      //-       console.log(p4 === p3);
+      //-   a(data-bespoke-run)
+      //-     | Run!
 
-      section
-        h2. 복합 객체의 비교
-        pre
-          code.language-javascript.
-            var objectFoo = { name : 'jong' };
-            var objectBar = { name : 'jong' };
+      //- section
+      //-   h2. 복합 객체의 비교
+      //-   pre
+      //-     code.language-javascript.
+      //-       var objectFoo = { name : 'jong' };
+      //-       var objectBar = { name : 'jong' };
 
-            console.log( objectFoo === objectBar );
+      //-       console.log( objectFoo === objectBar );
 
-            var objectA = { name : 'ti' };
-            var objectB = objectA;
+      //-       var objectA = { name : 'ti' };
+      //-       var objectB = objectA;
 
-            console.log( objectA === objectB );
-        a(data-bespoke-run)
-          | Run!
+      //-       console.log( objectA === objectB );
+      //-   a(data-bespoke-run)
+      //-     | Run!
       
-      section
-        h2. 객체 속성 접근방법
-        ul
-          li object['property_name']
-          li object.property_name
-        pre
-          code.language-javascript.
-            var obj = {
-                name : 'MyObject'
-            };
-            var a = 'name';
-            console.log(obj.name);
-            console.log(obj["name"]);
-            console.log(obj[a]);
-        a(data-bespoke-run)
-          | Run!
+      //- section
+      //-   h2. 객체 속성 접근방법
+      //-   ul
+      //-     li object['property_name']
+      //-     li object.property_name
+      //-   pre
+      //-     code.language-javascript.
+      //-       var obj = {
+      //-           name : 'MyObject'
+      //-       };
+      //-       var a = 'name';
+      //-       console.log(obj.name);
+      //-       console.log(obj["name"]);
+      //-       console.log(obj[a]);
+      //-   a(data-bespoke-run)
+      //-     | Run!
       
-      section
-        h2. 함수는 1급 클래스이다.
-        blockquote
-          | 변수, 배열, 객체에 저장될 수 있다는 뜻이다. 또한 함수에 전달될 수도 있고 함수에서 반환될 수도 있다. 그리고 함수는 객체이기 때문에 속성도 가지고 있다.
-          br
-          b - "자바스크립트를 깨우치다" 중에서
-        pre.small_font
-          code.language-javascript.
-            var myFun = function(){
-                console.log('MyFun');
-            };
+      //- section
+      //-   h2. 함수는 1급 클래스이다.
+      //-   blockquote
+      //-     | 변수, 배열, 객체에 저장될 수 있다는 뜻이다. 또한 함수에 전달될 수도 있고 함수에서 반환될 수도 있다. 그리고 함수는 객체이기 때문에 속성도 가지고 있다.
+      //-     br
+      //-     b - "자바스크립트를 깨우치다" 중에서
+      //-   pre.small_font
+      //-     code.language-javascript.
+      //-       var myFun = function(){
+      //-           console.log('MyFun');
+      //-       };
 
-            var yourFun = function(fn){
-              fn();
-              return function(){
-                console.log('return Fun');
-              }
-            };
+      //-       var yourFun = function(fn){
+      //-         fn();
+      //-         return function(){
+      //-           console.log('return Fun');
+      //-         }
+      //-       };
 
-            var retFun = yourFun(myFun);
-            retFun();
-        a(data-bespoke-run)
-          | Run!
+      //-       var retFun = yourFun(myFun);
+      //-       retFun();
+      //-   a(data-bespoke-run)
+      //-     | Run!
 
-      section
-        h2 this
-        pre
-          code.language-javascript.
-            function fn(){
-              console.log(this);
-            }
-            fn();
-            new fn();
-        a(data-bespoke-run)
-          | Run!
-        a(href="http://davidql.github.io/scope_talk/#/",target="_blank") this와 scope 참고 자료
+      //- section
+      //-   h2 this
+      //-   pre
+      //-     code.language-javascript.
+      //-       function fn(){
+      //-         console.log(this);
+      //-       }
+      //-       fn();
+      //-       new fn();
+      //-   a(data-bespoke-run)
+      //-     | Run!
+      //-   a(href="http://davidql.github.io/scope_talk/#/",target="_blank") this와 scope 참고 자료
       
-      section
-        h2 arguments
-        pre
-          code.language-javascript.
-            var myFun = function(){
-              console.log(arguments[0]);
-              console.log(arguments.length);
-              console.log(arguments.join);
-              console.log(arguments.callee);
-              console.log([].join);
-            };
-            myFun(1,2,'333','Ti');
+      //- section
+      //-   h2 arguments
+      //-   pre
+      //-     code.language-javascript.
+      //-       var myFun = function(){
+      //-         console.log(arguments[0]);
+      //-         console.log(arguments.length);
+      //-         console.log(arguments.join);
+      //-         console.log(arguments.callee);
+      //-         console.log([].join);
+      //-       };
+      //-       myFun(1,2,'333','Ti');
 
-        a(data-bespoke-run)
-          | Run!
+      //-   a(data-bespoke-run)
+      //-     | Run!
 
-      section
-        h2 Hoisting
-        p.small_font 함수 선언문 먼저 해석하고 Excuete context에 추가
-        pre
-          code.language-javascript.
-            foo();
-            function foo() {
-                console.log('I am NOT Android'); 
-            }
-        a(data-bespoke-run)
-          | Run!
+      //- section
+      //-   h2 Hoisting
+      //-   p.small_font 함수 선언문 먼저 해석하고 Excuete context에 추가
+      //-   pre
+      //-     code.language-javascript.
+      //-       foo();
+      //-       function foo() {
+      //-           console.log('I am NOT Android'); 
+      //-       }
+      //-   a(data-bespoke-run)
+      //-     | Run!
 
-      section
-        h2 클로저
-        pre
-          code.language-javascript.
-            var z = "global";
-            function outerFn() {
-                var z = "local";
-                alert(newVal);
-                return function innerFn()
-                {
-                        console.log(z);
-                }
-                innerFn();
-            } 
-            var newVal = 't';
-            var f = outerFn();
-            f();
-            console.log(z);
-        a(data-bespoke-run)
-          | Run!
+      //- section
+      //-   h2 클로저
+      //-   pre
+      //-     code.language-javascript.
+      //-       var z = "global";
+      //-       function outerFn() {
+      //-           var z = "local";
+      //-           alert(newVal);
+      //-           return function innerFn()
+      //-           {
+      //-                   console.log(z);
+      //-           }
+      //-           innerFn();
+      //-       } 
+      //-       var newVal = 't';
+      //-       var f = outerFn();
+      //-       f();
+      //-       console.log(z);
+      //-   a(data-bespoke-run)
+      //-     | Run!
       
-      section.gif.gif--yes4
-        h2(style="padding-left:200px") 준비한 내용은 
-          br
-          | 여기까지입니다.
-        h2(style="padding-left:200px") Front-end 어때요?
+      //- section.gif.gif--yes4
+      //-   h2(style="padding-left:200px") 준비한 내용은 
+      //-     br
+      //-     | 여기까지입니다.
+      //-   h2(style="padding-left:200px") Front-end 어때요?
 
-      section.light.gif.gif--rocky.full
-        h1 감사합니다.
-        h3(style="background-color:white") jong@yostudio.kr
-        h3(style="background-color:white") class.yostudio.kr    
+      //- section.light.gif.gif--rocky.full
+      //-   h1 감사합니다.
+      //-   h3(style="background-color:white") jong@yostudio.kr
+      //-   h3(style="background-color:white") class.yostudio.kr    
 
     script(src='build/build.js')
